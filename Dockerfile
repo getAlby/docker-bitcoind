@@ -3,7 +3,7 @@
 #FROM alpine:latest
 
 FROM ubuntu:latest AS builder
-ARG TARGETARCH
+ARG TARGETARCH=amd64
 
 FROM builder AS builder_amd64
 ENV ARCH=x86_64
