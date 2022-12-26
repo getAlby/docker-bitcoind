@@ -50,7 +50,7 @@ ARG USER_ID=1000
 RUN groupadd -g ${GROUP_ID} bitcoin \
     && useradd -u ${USER_ID} -g bitcoin -d /bitcoin bitcoin
 
-COPY --from=build /opt/ /opt/
+COPY --from=builder /opt/ /opt/
 
 RUN apt update \
     && apt install -y --no-install-recommends gosu libatomic1 \
