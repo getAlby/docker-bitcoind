@@ -3,6 +3,7 @@
 #FROM alpine:latest
 
 FROM ubuntu:latest AS builder
+ENV ARCH=x86_64
 
 # Testing: gosu
 #RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing/" >> /etc/apk/repositories \
